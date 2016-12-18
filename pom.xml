@@ -11,9 +11,9 @@
   <packaging>jar</packaging>
 
    <scm>
-        <connection>https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</connection>
-        <developerConnection>https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</developerConnection>
-        <url>https://github.com/lokeshgupta13/java-maven-junit-helloworld</url>
+        <connection>scm:git:https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</connection>
+        <developerConnection>scm:git:https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</developerConnection>
+        <url>scm:git:https://github.com/lokeshgupta13/java-maven-junit-helloworld</url>
         <tag>HEAD</tag>
   </scm>
 
