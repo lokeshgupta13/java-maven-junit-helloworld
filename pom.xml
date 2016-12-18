@@ -14,6 +14,7 @@
         <connection>https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</connection>
         <developerConnection>https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</developerConnection>
         <url>https://github.com/lokeshgupta13/java-maven-junit-helloworld</url>
+        <tag>HEAD</tag>
   </scm>
 
   <properties>
@@ -157,6 +158,16 @@
           <connectionType>developerConnection</connectionType>
         </configuration>
       </plugin>
+      <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <branchName>master</branchName>
+                    <pushChanges>false</pushChanges>
+                    <localCheckout>true</localCheckout>
+                </configuration>
+            </plugin>
 
     </plugins>
   </build>
