@@ -14,7 +14,6 @@
         <connection>https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</connection>
         <developerConnection>https://github.com/lokeshgupta13/java-maven-junit-helloworld.git</developerConnection>
         <url>https://github.com/lokeshgupta13/java-maven-junit-helloworld</url>
-        <tag>HEAD</tag>
   </scm>
 
   <properties>
