@@ -32,9 +32,9 @@ node {
     ])
     }
     
-    stage ("Upload to Artifcatory") {
+    //stage ("Upload to Artifcatory") {
       //  sh "${mvnHome}/bin/mvn artifactory:publish -Dusername=user -Dpassword=APAJedk3QV9SvPdupHQ2B8VrMrq"
-    }
+    //}
     
     //stage ("Release") {
     //    sh "${mvnHome}/bin/mvn release:clean -X release:prepare release:perform"        
