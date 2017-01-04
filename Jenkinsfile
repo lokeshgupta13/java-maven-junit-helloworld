@@ -3,7 +3,7 @@ node {
     def mvnHome = tool 'M3'
     
     stage ("Check Out") {
-        git url: 'https://github.com/lokeshgupta13/java-maven-junit-helloworld.git'
+        checkout scm
     }
         
     stage ("Build") {
@@ -33,7 +33,7 @@ node {
     }
     
     stage ("Upload to Artifcatory") {
-        sh "${mvnHome}/bin/mvn artifactory:publish -Dusername=user -Dpassword=APAJedk3QV9SvPdupHQ2B8VrMrq"
+      //  sh "${mvnHome}/bin/mvn artifactory:publish -Dusername=user -Dpassword=APAJedk3QV9SvPdupHQ2B8VrMrq"
     }
     
     //stage ("Release") {
