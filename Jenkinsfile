@@ -7,6 +7,11 @@ node {
     }
         
     stage ("Build") {
+        // we want to pick up the version from the pom
+        def pom = readMavenPom file: 'pom.xml'
+        def version = pom.version.replace("-SNAPSHOT", ".${currentBuild.number}")
+        echo "${version}"
+        sh "${mvnHome}/bin/mvn versions:set versions:update-child-modules -DnewVersion=${version}" 
         sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore cobertura:cobertura"
     }
         
@@ -32,9 +37,9 @@ node {
     ])
     }
     
-    //stage ("Upload to Artifcatory") {
-      //  sh "${mvnHome}/bin/mvn artifactory:publish -Dusername=user -Dpassword=APAJedk3QV9SvPdupHQ2B8VrMrq"
-    //}
+    stage ("Upload to Artifcatory") {
+        sh "${mvnHome}/bin/mvn deploy -Dartifactoryurl=http://54.200.248.158:8081/artifactory -Dusername=admin -Dpassword=AP85ANZPE3J1D2stR4k6ZHKQMvE"
+    }
     
     //stage ("Release") {
     //    sh "${mvnHome}/bin/mvn release:clean -X release:prepare release:perform"        
