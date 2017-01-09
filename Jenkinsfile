@@ -38,7 +38,7 @@ node {
     }
     
     stage ("Upload to Artifcatory") {
-        sh "${mvnHome}/bin/mvn deploy -Dartifactoryurl=http://54.214.219.63:8081/artifactory -Dusername=admin -Dpassword=AP85ANZPE3J1D2stR4k6ZHKQMvE"
+        sh "${mvnHome}/bin/mvn deploy -Dartifactoryurl=http://54.186.207.219:8081/artifactory -Dusername=admin -Dpassword=AP85ANZPE3J1D2stR4k6ZHKQMvE"
     }
     
     //stage ("Release") {
